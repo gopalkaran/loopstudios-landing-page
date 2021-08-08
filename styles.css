@@ -309,6 +309,10 @@ footer .nav-group li:hover::after {
 }
 
 @media only screen and (max-width: 850px) {
+  body {
+    grid-template-rows: 50rem auto 30rem;
+  }
+
   header .nav-bar ul {
     display: none;
   }
@@ -413,5 +417,43 @@ footer .nav-group li:hover::after {
   main .grid-list > div {
     background-size: auto;
     /* background-origin: ; */
+  }
+
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 15rem min-content min-content;
+    grid-template-areas:
+      "title"
+      "nav"
+      "social"
+      "copyright";
+  }
+
+  .footer-content .title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-content .nav-group {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .footer-content .social-group {
+    grid-area: social;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .footer-content .copyright {
+    grid-area: copyright;
+    display: flex;
+    justify-content: center;
   }
 }
