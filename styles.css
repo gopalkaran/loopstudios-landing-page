@@ -311,7 +311,7 @@ footer .nav-group li:hover::after {
 
 @media only screen and (max-width: 850px) {
   body {
-    grid-template-rows: 50rem auto 30rem;
+    grid-template-rows: 40rem auto 30rem;
   }
 
   header .nav-bar ul {
@@ -366,6 +366,11 @@ footer .nav-group li:hover::after {
 
   header .nav-bar ul li:hover::after {
     width: 100%;
+  }
+
+  header > div {
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .dark {
