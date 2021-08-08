@@ -256,6 +256,7 @@ footer .footer-content {
   gap: 1.5rem;
   padding-left: 0;
   align-items: flex-start;
+  margin: 1rem 0;
 }
 
 .footer-content .copyright {
