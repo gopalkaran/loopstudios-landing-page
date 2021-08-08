@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  display: grid;
+  grid-template-columns: 1.5fr 10fr 1.5fr;
+  grid-template-rows: 30rem auto 12rem;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-image: url(desktop/image-hero.jpg);
+  background-size: cover;
+  background-color: #aaa;
+  background-blend-mode: multiply;
+  color: white;
+  display: grid;
+  grid-template-columns: inherit;
+}
+header .nav-bar {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  margin: 2rem 0;
+}
+
+header .nav-bar .header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header .nav-bar ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header .nav-bar ul li {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+header .nav-bar ul li::after {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  width: 0;
+  background-color: white;
+  position: absolute;
+  top: 1.2rem;
+  transition: width 200ms ease-in-out;
+}
+
+header .nav-bar ul li:hover::after {
+  width: 50%;
+}
+
+header .nav-bar .nav-toggle {
+  display: none;
+}
+
+header .nav-bar .nav-checkbox {
+  display: none;
+}
+
+header > div {
+  grid-column: 2/3;
+  border: 0.1rem solid white;
+  font-size: 3rem;
+  max-width: 35rem;
+  height: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+}
+main {
+  grid-area: main;
+}
+
+main .overlap {
+  position: relative;
+}
+
+main .overlap img {
+  margin-top: 4rem;
+  /* height: 30rem; */
+  width: 40rem;
+}
+
+main .overlap > div {
+  height: fit-content;
+  width: 30rem;
+  background-color: white;
+  position: absolute;
+  top: 15rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0 4rem 4rem;
+}
+
+main .overlap > div > div {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+main .overlap > div small {
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  line-height: 1.5rem;
+}
+
+main .row {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: tomato; */
+}
+
+main .row div {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+main .row a {
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border: 0.2rem solid #444;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+main .row a:hover {
+  color: white;
+  background-color: #444;
+}
+
+main .grid-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 25rem;
+  grid-gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+main .grid-list div:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+main .grid-list .card1 {
+  background-image: url(desktop/image-deep-earth.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card2 {
+  background-image: url(desktop/image-night-arcade.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card3 {
+  background-image: url(desktop/image-soccer-team.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card4 {
+  background-image: url(desktop/image-grid.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card5 {
+  background-image: url(desktop/image-from-above.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card6 {
+  background-image: url(desktop/image-pocket-borealis.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card7 {
+  background-image: url(desktop/image-curiosity.jpg);
+  background-size: cover;
+}
+
+main .grid-list .card8 {
+  background-image: url(desktop/image-fisheye.jpg);
+  background-size: cover;
+}
+footer {
+  grid-area: footer;
+  background-color: black;
+  margin-top: 5rem;
+  color: white;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+footer .social-group {
+  grid-column: 2/3;
+  /* display: flex; */
+  /* background-color: lawngreen; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  height: fit-content;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .social-group > div {
+  font-size: 1.5rem;
+}
+
+footer .social-group ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+
+footer .social-group ul svg {
+  width: 1.5rem;
+}
+
+footer .social-group ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer .social-group ul li::after {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  width: 0;
+  background-color: white;
+  transition: width 200ms ease-in;
+}
+
+footer .social-group ul li:hover::after {
+  width: 100%;
+}
+
+footer .nav-group {
+  grid-column: 2/3;
+  /* display: flex; */
+  /* background-color: lightcoral; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  height: fit-content;
+  margin-bottom: 6rem;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .nav-group ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding-left: 0;
+}
+
+footer .nav-group ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer .nav-group ul li::after {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  width: 0;
+  background-color: white;
+  transition: width 200ms ease-in;
+}
+
+footer .nav-group ul li:hover::after {
+  width: 50%;
+}
+
+footer .nav-group > div {
+  color: #777;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  header .nav-bar ul {
+    display: none;
+  }
+
+  header .nav-bar .nav-toggle {
+    display: block;
+  }
+
+  header .nav-bar .nav-toggle .close {
+    display: none;
+  }
+  header .nav-bar .nav-toggle svg {
+    width: 1.5rem;
+    fill: white;
+  }
+
+  header .nav-bar #nav-checkbox:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
