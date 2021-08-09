@@ -416,8 +416,14 @@ footer .nav-group li:hover::after {
     text-align: center;
   }
 
+  main {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
   main .row > a {
-    display: none;
+    position: absolute;
+    bottom: -4rem;
   }
 
   main .row {
