@@ -431,11 +431,6 @@ footer .nav-group li:hover::after {
     grid-auto-rows: 10rem;
   }
 
-  main .grid-list > div {
-    background-size: auto;
-    /* background-origin: ; */
-  }
-
   footer .footer-content {
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 15rem min-content min-content;
