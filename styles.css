@@ -166,6 +166,17 @@ main .grid-list {
   margin-top: 3rem;
 }
 
+main .grid-list div {
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  font-size: 1.8rem;
+  background-color: #aaa;
+  background-blend-mode: multiply;
+}
+
 main .grid-list div:hover {
   opacity: 0.5;
   cursor: pointer;
