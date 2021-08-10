@@ -488,4 +488,8 @@ footer .nav-group li:hover::after {
     font-size: 2rem;
     padding: 0.5rem;
   }
+
+  .footer-content .copyright {
+    font-size: 0.5rem;
+  }
 }
