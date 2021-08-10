@@ -380,8 +380,8 @@ footer .nav-group li:hover::after {
   }
 
   header > div {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .dark {
@@ -473,5 +473,19 @@ footer .nav-group li:hover::after {
     grid-area: copyright;
     display: flex;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header > div {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header > div {
+    font-size: 2rem;
+    padding: 0.5rem;
   }
 }
